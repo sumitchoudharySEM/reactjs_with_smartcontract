@@ -6,7 +6,7 @@ import './App.css';
 const Name = () => {
 
 	// deploy simple storage contract and paste deployed contract address here. This value is local ganache chain
-	let contractAddress = '0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47';
+	let contractAddress = '0x358AA13c52544ECCEF6B0ADD0f801012ADAD5eE3';
 
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);
@@ -72,12 +72,22 @@ const Name = () => {
 		console.log('seted ' + event.target.setText.value + ' to the contract');
 	}
 
+    // const giveValue = (val) => {
+    //     console.log('giveValue function called');
+    //     setCurrentContractVal(val);
+    //     console.log('giveValue function value should be printed now');
+    // }
+
 	const getCurrentVal = async () => {
-        console.log('get function called');
+        //console.log(contract);
+        // console.log('get function called');
 		let val = await contract.get();
-        console.log('get function value stored');
-		setCurrentContractVal(val);
-        console.log('get function value should be printed now');
+		// let guys = await val;
+        // console.log(guys);
+        console.log(val);
+        // console.log('get function value stored');
+		// setCurrentContractVal(val);
+        // console.log('get function value should be printed now');
 	}
 	
 	return (
