@@ -3,7 +3,7 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_name",
+				"name": "newValue",
 				"type": "string"
 			}
 		],
@@ -15,6 +15,19 @@
 	{
 		"inputs": [],
 		"name": "get",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
 		"outputs": [
 			{
 				"internalType": "string",

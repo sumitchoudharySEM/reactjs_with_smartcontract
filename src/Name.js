@@ -6,7 +6,7 @@ import './App.css';
 const Name = () => {
 
 	// deploy simple storage contract and paste deployed contract address here. This value is local ganache chain
-	let contractAddress = '0x3CaD522f797eaAB4DEAA1A29fbcA031466B40981';
+	let contractAddress = '0xf6f072BE251d8d902e7e41B8922284F1B0F542B9';
 
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);
@@ -73,6 +73,7 @@ const Name = () => {
 	}
 
 	const getCurrentVal = async () => {
+		console.log("getting current value");
 		let val = await contract.get();
         console.log(val);
 	}
@@ -89,7 +90,7 @@ const Name = () => {
 				<button type={"submit"}> Update Name </button>
 			</form>
 			<div>
-			<button onClick={getCurrentVal} style={{marginTop: '5em'}}> Get Current Contract Value </button>
+			<button onClick={getCurrentVal} style={{marginTop: '5em'}}> Get Current Value </button>
 			</div>
 			{currentContractVal}
 			{errorMessage}
